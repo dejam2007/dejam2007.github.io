@@ -32,4 +32,11 @@ i3lock -c 000000 -d  #lock the screen
 xset dpms force off  #turn off screen at once
   sudo chmod a+x /usr/bin/lock.sh
   
+4. 显示时间
+  #在dwm状态栏显示时间和sys_load
+  while xsetroot -name "`date` `uptime | sed 's/.*,//'`"
+  do
+      sleep 1
+  done &
+
   </pre>
